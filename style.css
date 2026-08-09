@@ -5,8 +5,8 @@
     --text-muted: #4b5563;
     --accent-color: #2563eb;
     --border-color: #e5e7eb;
-    --glow-color: rgba(37, 99, 235, 0.18);
-    --glow-border: rgba(37, 99, 235, 0.4);
+    --glow-color: rgba(37, 99, 235, 0.15);
+    --glow-border: rgba(37, 99, 235, 0.35);
 }
 
 * {
@@ -26,23 +26,34 @@ body {
     overflow: hidden;
 }
 
-/* Ambient Backlit Container Effect */
+/* Outer Backdrop Layer with Side Arrows */
+.site-backdrop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Expanded Glass Window Container */
 .glow-container {
     position: relative;
-    width: 92vw;
-    height: 88vh;
-    max-width: 1300px;
+    width: 90vw;
+    height: 85vh;
+    max-width: 1400px;
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 24px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 50px 10px var(--glow-color), 
-                0 0 100px 20px rgba(0, 0, 0, 0.8),
+    box-shadow: 0 0 60px 15px var(--glow-color), 
+                0 0 120px 30px rgba(0, 0, 0, 0.9),
                 inset 0 0 0 1px var(--glow-border);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 6rem;
+    padding: 3.5rem 5rem;
     overflow: hidden;
 }
 
@@ -59,8 +70,8 @@ body {
     position: absolute;
     width: 100%;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
     display: flex;
     flex-direction: column;
@@ -73,36 +84,53 @@ body {
     pointer-events: auto;
 }
 
-/* Typography & Layout Styling */
-.section-badge {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: var(--accent-color);
+/* Header Row with Badge and Company Timeline */
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+.section-badge {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.company-tag {
+    font-size: 0.85rem;
     font-weight: 600;
+    color: var(--text-muted);
+    background: #f3f4f6;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* Typography & Layout Styling (San Serif throughout) */
+.section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--text-main);
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
     font-weight: 400;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
     width: 100%;
 }
 
@@ -110,65 +138,56 @@ body {
     background: #f9fafb;
     border: 1px solid var(--border-color);
     padding: 1.5rem;
-    border-radius: 12px;
-    position: relative;
+    border-radius: 14px;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .bullet-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: var(--accent-color);
 }
 
-.bullet-num {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
 .bullet-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.55;
     color: var(--text-muted);
 }
 
-/* Navigation Arrows */
+/* Navigation Arrows Sitting Outside the Window */
 .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    padding: 0.75rem 1.25rem;
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    justify-content: center;
     transition: all 0.2s ease;
-    z-index: 10;
+    z-index: 20;
 }
 
 .nav-btn:hover {
-    background: var(--text-main);
-    color: #ffffff;
-    border-color: var(--text-main);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
 }
 
-.prev-btn { left: 2rem; }
-.next-btn { right: 2rem; }
+.prev-btn { left: 2.5vw; }
+.next-btn { right: 2.5vw; }
 
 /* Pagination Tracker */
 .pagination-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.8rem;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -176,13 +195,9 @@ body {
 }
 
 /* Responsive Scaling */
-@media(max-width: 900px) {
-    .glow-container {
-        width: 96vw;
-        height: 92vh;
-        padding: 2rem 3rem;
-    }
-    .section-title { font-size: 1.8rem; }
-    .nav-btn span { display: none; }
-    .nav-btn { padding: 0.75rem; }
+@media(max-width: 1024px) {
+    .content-grid { grid-template-columns: 1fr; }
+    .glow-container { width: 95vw; height: 90vh; padding: 2rem; }
+    .section-title { font-size: 1.5rem; }
+    .company-tag { display: none; }
 }
