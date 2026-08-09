@@ -1,12 +1,12 @@
 :root {
     --bg-color: #0b0c10;
-    --card-bg: #ffffff;
-    --text-main: #111827;
-    --text-muted: #4b5563;
-    --accent-color: #2563eb;
-    --border-color: #e5e7eb;
-    --glow-color: rgba(37, 99, 235, 0.15);
-    --glow-border: rgba(37, 99, 235, 0.35);
+    --card-bg: #111216; /* True dark presentation slide background */
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --accent-color: #3b82f6;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glow-color: rgba(59, 130, 246, 0.2);
+    --glow-border: rgba(59, 130, 246, 0.4);
 }
 
 * {
@@ -26,7 +26,7 @@ body {
     overflow: hidden;
 }
 
-/* Outer Backdrop Layer with Side Arrows */
+/* Outer Backdrop Layer */
 .site-backdrop {
     position: relative;
     width: 100vw;
@@ -37,17 +37,17 @@ body {
     align-items: center;
 }
 
-/* Expanded Glass Window Container */
+/* Main Presentation Slide Container */
 .glow-container {
     position: relative;
     width: 90vw;
     height: 85vh;
     max-width: 1400px;
     background: var(--card-bg);
-    border-radius: 24px;
+    border-radius: 20px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 60px 15px var(--glow-color), 
-                0 0 120px 30px rgba(0, 0, 0, 0.9),
+    box-shadow: 0 0 70px 20px var(--glow-color), 
+                0 0 140px 40px rgba(0, 0, 0, 0.95),
                 inset 0 0 0 1px var(--glow-border);
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ body {
     overflow: hidden;
 }
 
-/* Full Bleed CV Section Wrapper */
+/* Section Wrapper */
 .cv-wrapper {
     width: 100%;
     height: 100%;
@@ -84,19 +84,19 @@ body {
     pointer-events: auto;
 }
 
-/* Header Row with Badge and Company Timeline */
+/* Header Row & Timelines */
 .section-header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .section-badge {
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     font-weight: 700;
     color: var(--accent-color);
 }
@@ -105,67 +105,112 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
-    background: #f3f4f6;
-    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 0.35rem 0.9rem;
     border-radius: 20px;
 }
 
-/* Typography & Layout Styling (San Serif throughout) */
+/* Typography */
 .section-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.02em;
+}
+
+.section-title-med {
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-main);
     line-height: 1.25;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--text-muted);
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
+/* Content Grid Layouts */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    gap: 1.5rem;
     width: 100%;
 }
 
-.bullet-card {
-    background: #f9fafb;
-    border: 1px solid var(--border-color);
-    padding: 1.5rem;
-    border-radius: 14px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    height: 100%;
-    display: flex;
-    align-items: center;
+.content-grid.three-col {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.bullet-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent-color);
+.content-grid.stats-layout {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Clean Editorial Bullet Cards (No Inner Borders) */
+.bullet-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid var(--accent-color);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bullet-card p {
-    font-size: 0.92rem;
-    line-height: 1.55;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--text-muted);
 }
 
-/* Navigation Arrows Sitting Outside the Window */
+/* Slide Stat Highlights */
+.stat-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.big-stat {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+}
+
+.big-stat-inline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-box p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Navigation Arrows Outside the Window */
 .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
     color: #ffffff;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -178,26 +223,26 @@ body {
 .nav-btn:hover {
     background: var(--accent-color);
     border-color: var(--accent-color);
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
 }
 
-.prev-btn { left: 2.5vw; }
-.next-btn { right: 2.5vw; }
+.prev-btn { left: 2vw; }
+.next-btn { right: 2vw; }
 
-/* Pagination Tracker */
+/* Pagination Indicator */
 .pagination-indicator {
     position: absolute;
-    bottom: 1.8rem;
+    bottom: 2rem;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     letter-spacing: 1px;
 }
 
-/* Responsive Scaling */
+/* Responsive Handling */
 @media(max-width: 1024px) {
-    .content-grid { grid-template-columns: 1fr; }
+    .content-grid.three-col, .content-grid.stats-layout { grid-template-columns: 1fr; }
     .glow-container { width: 95vw; height: 90vh; padding: 2rem; }
-    .section-title { font-size: 1.5rem; }
+    .section-title { font-size: 2rem; }
     .company-tag { display: none; }
 }
