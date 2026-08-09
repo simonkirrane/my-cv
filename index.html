@@ -7,132 +7,132 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="glow-container">
-        <!-- Navigation Controls -->
+    <!-- Outer Layer with Navigation Arrows -->
+    <div class="site-backdrop">
         <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous Section">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            <span>Prev</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
 
-        <button class="nav-btn next-btn" id="nextBtn" aria-label="Next Section">
-            <span>Next</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
+        <!-- Main CV Glass Window -->
+        <main class="glow-container">
+            <div class="cv-wrapper">
+                
+                <!-- SECTION 1: Executive Summary -->
+                <section class="cv-section active" data-index="1">
+                    <div class="section-header-row">
+                        <span class="section-badge">Executive Summary & Strategic Fit</span>
+                        <span class="company-tag">Global Enterprise / SaaS Context</span>
+                    </div>
+                    <h1 class="section-title">Simon Kirrane</h1>
+                    <p class="section-subtitle">Head of Content & Transformation Leader</p>
+                    <div class="content-grid">
+                        <div class="bullet-card">
+                            <p>MBA-qualified strategic leader with 20+ years of experience driving growth, organic traffic scaling, and digital transformation across global B2B, SaaS, and enterprise environments (such as Kolekti, Future Plc, Canon, and O2)[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Proven track record of compressing content development lifecycles from traditional 18-month timelines down to under 6 months[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Direct enterprise-scale leadership experience overseeing multi-region content operations, global teams, and significant transformation mandates[cite: 1].</p>
+                        </div>
+                    </div>
+                </section>
 
-        <!-- Main CV Container -->
-        <main class="cv-wrapper">
-            
-            <!-- SECTION 1: Executive Summary -->
-            <section class="cv-section active" data-index="1">
-                <div class="section-badge">01 / Executive Summary</div>
-                <h1 class="section-title">Simon Kirrane</h1>
-                <p class="section-subtitle">Head of Content & Transformation Leader</p>
-                <div class="content-grid">
-                    <div class="bullet-card">
-                        <span class="bullet-num">01</span>
-                        <p>MBA-qualified strategic leader with 20+ years of experience driving growth, organic traffic scaling, and digital transformation across global B2B, SaaS, and enterprise environments (such as Kolekti, Future Plc, Canon, and O2).</p>
+                <!-- SECTION 2: Operational Velocity -->
+                <section class="cv-section" data-index="2">
+                    <div class="section-header-row">
+                        <span class="section-badge">Operational Velocity</span>
+                        <span class="company-tag">Future Plc & Kolekti / Adaptavist | 2019 – Present</span>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">02</span>
-                        <p>Proven track record of compressing content development lifecycles from traditional 18-month timelines down to under 6 months.</p>
+                    <h2 class="section-title">Operational Velocity: Slashing Time-to-Market from 18 to 6 Months</h2>
+                    <div class="content-grid">
+                        <div class="bullet-card">
+                            <p>Rapidly built and launched digital initiatives—such as standing up platforms like Advnture.com in just six weeks, scaling to 8.4m quarterly visits[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Engineered workflow re-designs that cut production timelines significantly, including saving 25% production time across major multi-title portfolios through shared resource frameworks[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Spearheaded systemic operational workflows, templates, and Agile systems at Kolekti/Adaptavist that eliminated bottlenecks and transformed bottom-of-funnel conversion[cite: 1].</p>
+                        </div>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">03</span>
-                        <p>Direct enterprise-scale leadership experience overseeing multi-region content operations, global teams, and significant transformation mandates.</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- SECTION 2: Operational Velocity -->
-            <section class="cv-section" data-index="2">
-                <div class="section-badge">02 / Operational Velocity</div>
-                <h2 class="section-title">Sashing Time-to-Market from 18 to 6 Months</h2>
-                <div class="content-grid">
-                    <div class="bullet-card">
-                        <span class="bullet-num">01</span>
-                        <p>Rapidly built and launched digital initiatives—such as standing up platforms like Advnture.com in just six weeks, scaling to 8.4m quarterly visits.</p>
+                <!-- SECTION 3: Global Scale -->
+                <section class="cv-section" data-index="3">
+                    <div class="section-header-row">
+                        <span class="section-badge">Global Execution</span>
+                        <span class="company-tag">Future Plc & International Portfolios | 2012 – 2022</span>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">02</span>
-                        <p>Engineered workflow re-designs that cut production timelines significantly, including saving 25% production time across major multi-title portfolios through shared resource frameworks.</p>
+                    <h2 class="section-title">Scaling Global Operations & Cross-Functional Teams</h2>
+                    <div class="content-grid">
+                        <div class="bullet-card">
+                            <p>Managed large hybrid, remote, and international organizations spanning the UK, Europe, and global markets[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Successfully onboarded and line-managed multiple teams and portfolios through corporate M&A transitions at Future Plc, seamlessly establishing unified digital best practices[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Directed enterprise-level operational budgets, strategic planning, and agency relationships while preserving brand integrity across dozens of global media and tech brands[cite: 1].</p>
+                        </div>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">03</span>
-                        <p>Spearheaded systemic operational workflows, templates, and Agile systems at Kolekti/Adaptavist that eliminated bottlenecks and transformed bottom-of-funnel conversion.</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- SECTION 3: Global Scale -->
-            <section class="cv-section" data-index="3">
-                <div class="section-badge">03 / Global Execution</div>
-                <h2 class="section-title">Scaling Global Operations & Cross-Functional Teams</h2>
-                <div class="content-grid">
-                    <div class="bullet-card">
-                        <span class="bullet-num">01</span>
-                        <p>Managed large hybrid, remote, and international organizations spanning the UK, Europe, and global markets.</p>
+                <!-- SECTION 4: Tech Stack & AI -->
+                <section class="cv-section" data-index="4">
+                    <div class="section-header-row">
+                        <span class="section-badge">Systems & AI</span>
+                        <span class="company-tag">Kolekti / Adaptavist & Enterprise Tech | 2023 – Present</span>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">02</span>
-                        <p>Successfully onboarded and line-managed multiple teams and portfolios through corporate M&A transitions at Future Plc, seamlessly establishing unified digital best practices.</p>
+                    <h2 class="section-title">AI-Native Workflows & Enterprise Architecture</h2>
+                    <div class="content-grid">
+                        <div class="bullet-card">
+                            <p>Deep technical expertise in the Atlassian ecosystem (Jira, Confluence) and advanced custom macro integrations (such as building custom solutions to override default Rovo settings)[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Pioneered AI-driven editorial scaling strategies, authored The Generative AI Playbook, and leveraged automation to maximize output volume without sacrificing human quality[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Spearheaded technical overhauls including Google Schema optimization and complex navigation frameworks to enhance LLM visibility and organic search growth (achieving a 171% monthly organic traffic increase at Kolekti)[cite: 1].</p>
+                        </div>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">03</span>
-                        <p>Directed enterprise-level operational budgets, strategic planning, and agency relationships while preserving brand integrity across dozens of global media and tech brands.</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- SECTION 4: Tech Stack & AI -->
-            <section class="cv-section" data-index="4">
-                <div class="section-badge">04 / Systems & AI</div>
-                <h2 class="section-title">AI-Native Workflows & Enterprise Architecture</h2>
-                <div class="content-grid">
-                    <div class="bullet-card">
-                        <span class="bullet-num">01</span>
-                        <p>Deep technical expertise in the Atlassian ecosystem (Jira, Confluence) and advanced custom macro integrations (such as building custom solutions to override default Rovo settings).</p>
+                <!-- SECTION 5: Commercial Impact -->
+                <section class="cv-section" data-index="5">
+                    <div class="section-header-row">
+                        <span class="section-badge">Commercial Impact</span>
+                        <span class="company-tag">Consultancy, Agency & Enterprise | 1995 – Present</span>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">02</span>
-                        <p>Pioneered AI-driven editorial scaling strategies, authored The Generative AI Playbook, and leveraged automation to maximize output volume without sacrificing human quality.</p>
+                    <h2 class="section-title">Driving Commercial Growth & Enterprise Value</h2>
+                    <div class="content-grid">
+                        <div class="bullet-card">
+                            <p>Extensive agency-side and enterprise experience winning large accounts (Canon, ODEON, TransPennine Express, South West Railway), negotiating scope, and managing delivery-risk visibility directly with C-suite stakeholders[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Scaled high-margin revenue streams, built digital properties, and launched international bookazine startups that opened multiple overseas markets across 88 titles in 1.5 years[cite: 1].</p>
+                        </div>
+                        <div class="bullet-card">
+                            <p>Combines deep editorial innovation with rigorous data-informed performance marketing to align content output directly with corporate growth strategies and enterprise SaaS goals[cite: 1].</p>
+                        </div>
                     </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">03</span>
-                        <p>Spearheaded technical overhauls including Google Schema optimization and complex navigation frameworks to enhance LLM visibility and organic search growth (achieving a 171% monthly organic traffic increase at Kolekti).</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- SECTION 5: Commercial Impact -->
-            <section class="cv-section" data-index="5">
-                <div class="section-badge">05 / Commercial Impact</div>
-                <h2 class="section-title">Driving Commercial Growth & Enterprise Value</h2>
-                <div class="content-grid">
-                    <div class="bullet-card">
-                        <span class="bullet-num">01</span>
-                        <p>Extensive agency-side and enterprise experience winning large accounts (Canon, ODEON, TransPennine Express, South West Railway), negotiating scope, and managing delivery-risk visibility directly with C-suite stakeholders.</p>
-                    </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">02</span>
-                        <p>Scaled high-margin revenue streams, built digital properties, and launched international bookazine startups that opened multiple overseas markets across 88 titles in 1.5 years.</p>
-                    </div>
-                    <div class="bullet-card">
-                        <span class="bullet-num">03</span>
-                        <p>Combines deep editorial innovation with rigorous data-informed performance marketing to align content output directly with corporate growth strategies and enterprise SaaS goals.</p>
-                    </div>
-                </div>
-            </section>
+            </div>
 
+            <!-- Slide Counter Indicator -->
+            <div class="pagination-indicator">
+                <span id="currentSlideNum">01</span> / <span id="totalSlideNum">05</span>
+            </div>
         </main>
 
-        <!-- Slide Counter Indicator -->
-        <div class="pagination-indicator">
-            <span id="currentSlideNum">01</span> / <span id="totalSlideNum">05</span>
-        </div>
+        <button class="nav-btn next-btn" id="nextBtn" aria-label="Next Section">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
     </div>
 
     <script src="script.js"></script>
