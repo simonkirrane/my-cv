@@ -15,23 +15,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % totalSections;
-        updateSection(currentIndex);
+        if (currentIndex < totalSections - 1) {
+            currentIndex++;
+            updateSection(currentIndex);
+        }
     });
 
     prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + totalSections) % totalSections;
-        updateSection(currentIndex);
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSection(currentIndex);
+        }
     });
 
-    // Keyboard Arrow Support
+    // Keyboard Arrow Support (Stops at final contact slide)
     document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowRight") {
-            currentIndex = (currentIndex + 1) % totalSections;
-            updateSection(currentIndex);
+            if (currentIndex < totalSections - 1) {
+                currentIndex++;
+                updateSection(currentIndex);
+            }
         } else if (e.key === "ArrowLeft") {
-            currentIndex = (currentIndex - 1 + totalSections) % totalSections;
-            updateSection(currentIndex);
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSection(currentIndex);
+            }
         }
     });
 });
