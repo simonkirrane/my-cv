@@ -1,12 +1,10 @@
 :root {
     --bg-color: #0b0c10;
-    --card-bg: #ffffff; /* Clean sophisticated white presentation window */
-    --text-main: #111827; /* Dark charcoal text */
-    --text-muted: #4b5563; /* Muted dark gray description text */
+    --card-bg: #ffffff !important;
+    --text-main: #111827 !important;
+    --text-muted: #4b5563 !important;
     --accent-color: #2563eb;
     --border-color: #e5e7eb;
-    --glow-color: rgba(37, 99, 235, 0.15);
-    --glow-border: rgba(37, 99, 235, 0.35);
 }
 
 * {
@@ -26,7 +24,6 @@ body {
     overflow: hidden;
 }
 
-/* Outer Backdrop Layer */
 .site-backdrop {
     position: relative;
     width: 100vw;
@@ -37,18 +34,16 @@ body {
     align-items: center;
 }
 
-/* Main Presentation Slide Container */
 .glow-container {
     position: relative;
     width: 90vw;
     height: 85vh;
     max-width: 1400px;
-    background: var(--card-bg);
+    background: #ffffff !important;
     border-radius: 20px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 70px 20px var(--glow-color), 
-                0 0 140px 40px rgba(0, 0, 0, 0.95),
-                inset 0 0 0 1px var(--glow-border);
+    box-shadow: 0 0 70px 20px rgba(37, 99, 235, 0.15), 
+                0 0 140px 40px rgba(0, 0, 0, 0.95);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +52,6 @@ body {
     overflow: hidden;
 }
 
-/* Section Wrapper */
 .cv-wrapper {
     width: 100%;
     height: 100%;
@@ -84,7 +78,6 @@ body {
     pointer-events: auto;
 }
 
-/* Header Row & Timelines */
 .section-header-row {
     display: flex;
     justify-content: space-between;
@@ -104,57 +97,48 @@ body {
 .company-tag {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: #4b5563;
     background: #f3f4f6;
     border: 1px solid var(--border-color);
     padding: 0.35rem 0.9rem;
     border-radius: 20px;
 }
 
-/* Typography */
 .section-title {
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--text-main);
+    color: #111827 !important;
     line-height: 1.15;
     margin-bottom: 0.4rem;
-    letter-spacing: -0.02em;
 }
 
 .section-title-med {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: #111827 !important;
     line-height: 1.25;
     margin-bottom: 2rem;
-    letter-spacing: -0.01em;
 }
 
 .section-subtitle {
     font-size: 1.15rem;
-    color: var(--text-muted);
+    color: #4b5563 !important;
     font-weight: 400;
     margin-bottom: 2.5rem;
 }
 
-/* Content Grid Layouts */
 .content-grid {
     display: grid;
     gap: 1.5rem;
     width: 100%;
 }
 
-.content-grid.three-col {
+.content-grid.three-col, .content-grid.stats-layout {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.content-grid.stats-layout {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* Clean Editorial Bullet Cards */
-.bullet-card {
-    background: #f9fafb;
+.bullet-card, .stat-box {
+    background: #f9fafb !important;
     border-left: 3px solid var(--accent-color);
     border-top: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
@@ -166,29 +150,17 @@ body {
     justify-content: center;
 }
 
-.bullet-card p {
+.bullet-card p, .stat-box p {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--text-muted);
-}
-
-/* Slide Stat Highlights */
-.stat-box {
-    background: #f9fafb;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: #4b5563 !important;
 }
 
 .big-stat {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--text-main);
+    color: #111827 !important;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.03em;
 }
 
 .big-stat-inline {
@@ -199,26 +171,20 @@ body {
     display: block;
 }
 
-.stat-box p {
-    font-size: 0.92rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-}
-
-/* Contact Card Styles */
 .contact-card {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     border-left: 3px solid var(--accent-color);
+    background: #f9fafb !important;
     transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .contact-card:hover {
     transform: translateY(-4px);
-    border-color: var(--text-main);
-    background: #f3f4f6;
+    border-color: #111827;
+    background: #f3f4f6 !important;
 }
 
 .contact-label {
@@ -233,16 +199,15 @@ body {
 .contact-link {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--text-main) !important;
+    color: #111827 !important;
 }
 
-/* Navigation Arrows Outside the Window */
 .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
     width: 60px;
     height: 60px;
@@ -258,26 +223,16 @@ body {
 .nav-btn:hover {
     background: var(--accent-color);
     border-color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
 }
 
 .prev-btn { left: 2vw; }
 .next-btn { right: 2vw; }
 
-/* Pagination Indicator */
 .pagination-indicator {
     position: absolute;
     bottom: 2rem;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: #4b5563;
     letter-spacing: 1px;
-}
-
-/* Responsive Handling */
-@media(max-width: 1024px) {
-    .content-grid.three-col, .content-grid.stats-layout { grid-template-columns: 1fr; }
-    .glow-container { width: 95vw; height: 90vh; padding: 2rem; }
-    .section-title { font-size: 2rem; }
-    .company-tag { display: none; }
 }
