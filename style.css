@@ -393,3 +393,102 @@ body {
     .prev-btn { left: 1vw; }
     .next-btn { right: 1vw; }
 }
+/* --- MOBILE RESPONSIVE & DYNAMIC FIXES --- */
+
+@media (max-width: 1024px) {
+    .glow-container {
+        padding: 2.5rem 2rem;
+        height: 90vh;
+    }
+    
+    .content-grid.three-col, .content-grid.stats-layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-title-med {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto; /* Allow natural page scroll on small screens if needed */
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .site-backdrop {
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        padding: 1rem 0.5rem;
+    }
+
+    .glow-container {
+        width: 95vw;
+        height: 82vh;
+        height: 82dvh;
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+        overflow-y: auto; /* Enable internal scrolling for long role descriptions */
+    }
+
+    .cv-wrapper {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding-bottom: 3rem;
+    }
+
+    .cv-section {
+        position: relative; /* Switch from absolute stacking to relative flow on mobile to prevent clipping */
+        opacity: 0;
+        transform: translateY(10px);
+        display: none;
+    }
+
+    .cv-section.active {
+        opacity: 1;
+        transform: translateY(0);
+        display: flex;
+    }
+
+    .content-grid.three-col {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .bullet-card, .stat-box {
+        padding: 1rem;
+    }
+
+    .bullet-card p, .stat-box p {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    /* Move navigation buttons inside or below the card container on mobile for thumb reach */
+    .nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .prev-btn { left: 0.5vw; }
+    .next-btn { right: 0.5vw; }
+
+    .section-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+    }
+}
